@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles.css';
 import P from 'prop-types';
 
@@ -14,12 +13,8 @@ export const Posts = ({ posts = [] }) => {
   );
 };
 
-Posts.defaultProps = {
-  posts: [],
-};
-
 Posts.propTypes = {
-  posts: P.array(
+  posts: P.arrayOf(
     P.shape({
       title: P.string.isRequired,
       cover: P.string.isRequired,
